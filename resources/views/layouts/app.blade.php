@@ -21,8 +21,9 @@
     <body>
         <section id="welcome">
           @include('includes.sidemenu')
-
-            @yield('content')
+            <section id="content-section">
+                @yield('content')
+            </section>
           </section>
     </body>
 </html>

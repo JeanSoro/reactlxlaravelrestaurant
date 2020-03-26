@@ -11023,6 +11023,102 @@ table {
   border-spacing: 0;
 }
 
+.welcome-jumbo {
+  max-width: calc(100vw - 350px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ed4852;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  overflow: hidden;
+  padding: 100px;
+}
+
+.welcome-jumbo .status {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  background: black;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.welcome-jumbo h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  align-self: flex-start;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.welcome-jumbo .burger-fries {
+  width: 100%;
+  position: relative;
+}
+
+#about-page {
+  padding: 100px;
+}
+
+#about-page h1 {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+#about-page p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+#about-page .content-box {
+  background: #FFF;
+  padding: 20px;
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 #welcome {
   display: grid;
   grid-template-columns: 350px 1fr;
@@ -11111,12 +11207,8 @@ table {
   text-decoration: none;
 }
 
-#welcome .welcome-jumbo {
+#welcome #content-section {
   max-width: calc(100vw - 350px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background: #ed4852;
   /* Old browsers */
   /* FF3.6-15 */
@@ -11124,32 +11216,6 @@ table {
   background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   overflow: hidden;
-  padding: 100px;
-}
-
-#welcome .welcome-jumbo .status {
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: white;
-  background: black;
-  border-radius: 5px;
-  align-self: flex-start;
-  margin-bottom: 20px;
-}
-
-#welcome .welcome-jumbo h1 {
-  font-size: 4rem;
-  font-weight: 900;
-  align-self: flex-start;
-  color: white;
-  margin-bottom: 100px;
-}
-
-#welcome .welcome-jumbo .burger-fries {
-  width: 100%;
-  position: relative;
 }
 
 #information {
@@ -11352,37 +11418,5 @@ h2 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 3rem;
-}
-
-body {
-  line-height: 1;
-  background: white;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
 }
 

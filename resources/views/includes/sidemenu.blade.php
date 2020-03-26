@@ -4,11 +4,11 @@
     </a>
     <div class="menu">
       <div class="menu-title">
-        Menu
+        Welcome
       </div>
       <ul class="links">
         <li>
-          <a href="/menu">Menu</a>
+          <a href="/menu">Food</a>
         </li>
         <li>
           <a href="/waitlist">Waitlist</a>
