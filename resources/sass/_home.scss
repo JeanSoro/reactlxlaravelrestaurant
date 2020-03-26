@@ -1,5 +1,6 @@
 .welcome-jumbo {
-    max-width: calc(100vw - 350px);
+    transform: translate3d(300px, 0, 0);
+    max-width: calc(100vw - 300px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,3 +53,31 @@
     // }
 
 }
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
+
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-up(md) { ... }
+// @include media-breakpoint-up(lg) { ... }
+// @include media-breakpoint-up(xl) { ... }
+
+// Example usage:
+// @include media-breakpoint-up(sm) {
+//   .some-class {
+//     display: block;
+//   }
+// }

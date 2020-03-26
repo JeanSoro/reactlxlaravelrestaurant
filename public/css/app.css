@@ -11024,7 +11024,8 @@ table {
 }
 
 .welcome-jumbo {
-  max-width: calc(100vw - 350px);
+  transform: translate3d(300px, 0, 0);
+  max-width: calc(100vw - 300px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11121,7 +11122,6 @@ body {
 
 #welcome {
   display: grid;
-  grid-template-columns: 350px 1fr;
   width: 100%;
   height: 100vh;
 }
@@ -11129,7 +11129,9 @@ body {
 #welcome .welcome-menu {
   background: white;
   padding: 50px;
-  position: relative;
+  position: absolute;
+  height: 100vh;
+  width: 300px;
 }
 
 #welcome .welcome-menu .logo {
@@ -11208,7 +11210,8 @@ body {
 }
 
 #welcome #content-section {
-  max-width: calc(100vw - 350px);
+  transform: translate3d(300px, 0, 0);
+  max-width: calc(100vw - 300px);
   background: #ed4852;
   /* Old browsers */
   /* FF3.6-15 */
@@ -11418,5 +11421,31 @@ h2 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 3rem;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #welcome .welcome-menu {
+    display: none;
+  }
+
+  #welcome .welcome-jumbo {
+    max-width: 100vw;
+    padding: 20px;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #information {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px auto;
+  }
+
+  #information .info {
+    padding: 20px;
+  }
+
+  #information .info .paragraphs {
+    grid-template-columns: 1fr;
+  }
 }
 
