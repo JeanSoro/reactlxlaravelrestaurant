@@ -1,4 +1,4 @@
-#about-page {
+#waitlist-page {
 
     padding: 100px;
 
@@ -16,6 +16,32 @@
         font-weight: 400;
     }
 
+    form {
+        .form-group {
+            label {
+                font-weight: 700;
+                margin-bottom: 10px;
+                color: black;
+            }
+
+            .form-control {
+                border: 2px solid #9C1B24;
+                font-size: 1rem;
+                padding: 10px !important;
+                box-sizing: border-box;
+                height: auto;
+            }
+
+            button[type="submit"] {
+                background: #9C1B24;
+                border: none;
+                padding: 20px 40px;
+            }
+        }
+
+    }
+
+
 }
 
 // ****************Responsive Design***************
@@ -25,8 +51,12 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 0px) and (max-width: 767px) {
-    #about-page {
+    #waitlist-page {
         padding: 20px;
+
+        h1 {
+            font-size: 2rem;
+        }
     }
 }
 

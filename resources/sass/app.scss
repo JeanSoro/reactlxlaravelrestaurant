@@ -11,6 +11,7 @@
 @import "reset";
 @import "home";
 @import "about";
+@import "waitlist";
 
 
 body {
@@ -538,6 +539,11 @@ h2 {
             }
         }
     }
+}
+
+.content-box {
+    background: #FFF;
+    padding: 20px
 }
 
 // Large devices (desktops, 992px and up)

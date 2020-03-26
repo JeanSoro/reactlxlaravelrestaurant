@@ -11083,14 +11083,57 @@ table {
   font-weight: 400;
 }
 
-#about-page .content-box {
-  background: #FFF;
-  padding: 20px;
-}
-
 @media (min-width: 0px) and (max-width: 767px) {
   #about-page {
     padding: 20px;
+  }
+}
+
+#waitlist-page {
+  padding: 100px;
+}
+
+#waitlist-page h1 {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+#waitlist-page p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+#waitlist-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+
+#waitlist-page form .form-group .form-control {
+  border: 2px solid #9C1B24;
+  font-size: 1rem;
+  padding: 10px !important;
+  box-sizing: border-box;
+  height: auto;
+}
+
+#waitlist-page form .form-group button[type=submit] {
+  background: #9C1B24;
+  border: none;
+  padding: 20px 40px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #waitlist-page {
+    padding: 20px;
+  }
+
+  #waitlist-page h1 {
+    font-size: 2rem;
   }
 }
 
@@ -11562,5 +11605,10 @@ h2 {
   #information #food-preview .food-slider .slide {
     width: 50%;
   }
+}
+
+.content-box {
+  background: #FFF;
+  padding: 20px;
 }
 
