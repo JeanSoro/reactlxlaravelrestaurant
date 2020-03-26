@@ -11088,6 +11088,12 @@ table {
   padding: 20px;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  #about-page {
+    padding: 20px;
+  }
+}
+
 body {
   line-height: 1;
   background: white;
@@ -11424,11 +11430,24 @@ h2 {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
   #welcome .welcome-menu {
-    display: none;
+    transform: translate3d(-300px, 0, 0);
   }
 
   #welcome .welcome-jumbo {
+    max-width: 100vw;
+    padding: 20px;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #welcome #content-section {
     max-width: 100vw;
     padding: 20px;
     width: 100%;
@@ -11444,8 +11463,104 @@ h2 {
     padding: 20px;
   }
 
+  #information .info .about-link span {
+    width: 50%;
+  }
+
   #information .info .paragraphs {
     grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
+
+  #information #food-preview {
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #information #food-preview .button-rounded {
+    margin-bottom: 2rem;
+  }
+
+  #information #food-preview .container .left-btn {
+    left: -20px;
+  }
+
+  #information #food-preview .container .right-btn {
+    left: -20px;
+  }
+
+  #information #food-preview h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  #information #food-preview .food-slider .slide {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #welcome .welcome-menu {
+    display: none;
+  }
+
+  #welcome .welcome-jumbo {
+    max-width: 100vw;
+    padding: 20px;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #welcome #content-section {
+    max-width: 100vw;
+    padding: 20px;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #information {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px auto;
+  }
+
+  #information .info {
+    padding: 20px;
+  }
+
+  #information .info .about-link span {
+    width: 50%;
+  }
+
+  #information .info .paragraphs {
+    grid-template-columns: 50% 50%;
+  }
+
+  #information #food-preview {
+    padding: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #information #food-preview .button-rounded {
+    margin-bottom: 2rem;
+  }
+
+  #information #food-preview .container .left-btn {
+    left: -20px;
+  }
+
+  #information #food-preview .container .right-btn {
+    left: -20px;
+  }
+
+  #information #food-preview h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+
+  #information #food-preview .food-slider .slide {
+    width: 50%;
   }
 }
 
