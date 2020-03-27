@@ -11137,6 +11137,66 @@ table {
   }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  #waitlist-page {
+    padding: 20px;
+  }
+}
+
+#offers-page {
+  padding: 100px;
+}
+
+#offers-page h1 {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+#offers-page p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+#offers-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+
+#offers-page form .form-group .form-control {
+  border: 2px solid #9C1B24;
+  font-size: 1rem;
+  padding: 10px !important;
+  box-sizing: border-box;
+  height: auto;
+}
+
+#offers-page form .form-group button[type=submit] {
+  background: #9C1B24;
+  border: none;
+  padding: 20px 40px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #offers-page {
+    padding: 20px;
+  }
+
+  #offers-page h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #offers-page {
+    padding: 20px;
+  }
+}
+
 body {
   line-height: 1;
   background: white;
