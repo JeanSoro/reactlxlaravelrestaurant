@@ -11089,6 +11089,12 @@ table {
   }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  #about-page {
+    padding: 20px;
+  }
+}
+
 #waitlist-page {
   padding: 100px;
 }
@@ -11193,6 +11199,42 @@ table {
 
 @media (min-width: 768px) and (max-width: 991px) {
   #offers-page {
+    padding: 20px;
+  }
+}
+
+#menu-page {
+  padding: 100px;
+}
+
+#menu-page #food-preview {
+  padding: 0;
+  background: transparent;
+}
+
+#menu-page #food-preview h2 {
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+#menu-page #food-preview .right-btn,
+#menu-page #food-preview .left-btn {
+  background: #000;
+}
+
+#menu-page #food-preview .food-slider .slide:hover .background {
+  background: #000;
+  transform: translate3d(0, -200px, 0);
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #menu-page {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #menu-page {
     padding: 20px;
   }
 }
@@ -11327,7 +11369,6 @@ body {
   /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  overflow: hidden;
 }
 
 #information {
@@ -11417,12 +11458,12 @@ body {
   display: inline-block;
   padding: 15px;
   border-radius: 30px;
-  margin-bottom: 130px;
+  margin-bottom: 50px;
 }
 
 #food-preview .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1100px;
   position: relative;
 }
 
@@ -11452,7 +11493,7 @@ body {
 
 #food-preview .food-slider {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1100px;
   overflow: hidden;
   position: relative;
   font-size: 0;
@@ -11510,14 +11551,14 @@ body {
   color: #ed4852;
   font-size: 2rem;
   font-weight: 900;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 #food-preview .food-slider .slide .content .food-description {
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.8;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   color: #7a8d99;
 }
 
