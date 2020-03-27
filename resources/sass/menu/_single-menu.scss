@@ -1,0 +1,55 @@
+#single_menu-page {
+
+    padding: 100px;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: red;
+        margin-bottom: 2rem;
+    }
+
+    .item {
+        margin-bottom: 2rem;
+    }
+
+    .title {
+        display: flex;
+        width: 100%;
+        margin-bottom: .5rem;
+        justify-content: space-between;
+
+        h4,
+        .price {
+            font-size: 1rem;
+            color: #000;
+            font-weight: 900
+        }
+    }
+
+}
+
+// ****************Responsive Design***************
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 0px) and (max-width: 767px) {
+    #single_menu-page {
+        padding: 20px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    #single_menu-page {
+        padding: 20px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200) {}
