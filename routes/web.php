@@ -17,7 +17,7 @@
 
 Route::get('/', 'StaticPagesController@home');
 
-Route::get('/waitlist', 'StaticPagesController@waitlist');
+Route::get('/reservations', 'StaticPagesController@reservations');
 
 Route::get('/contact', 'StaticPagesController@contact');
 
@@ -37,9 +37,9 @@ Route::get('/menu', 'StaticPagesController@menu');
 Route::get('/menu/{slug}', 'StaticPagesController@singlemenu');
 
 
-// ----------------------------------------------------------
-// *******ADMIN DASHBOARD AND FOOD CATEGORIES + ITEMS********
-// ------------------------------------------------------------
+// ---------------------------------------------------------------------
+// *******ADMIN DASHBOARD AND FOOD CATEGORIES + ITEMS + CUSTOMERS********
+// ----------------------------------------------------------------------
 
 
 Route::get('/admin', 'admin\AdminController@dashboard');
@@ -50,13 +50,19 @@ Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@crea
 
 Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
 
-// ############################FOOD ITEMS###################################
+// ############################FOOD ITEMS################################
 
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
 
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+
+// ############################CUSTOMERS#################################
+
+Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers');
+
+Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
 
 // -------------------------------------
 // ***********AUTH ROUTES ADMIN***********
