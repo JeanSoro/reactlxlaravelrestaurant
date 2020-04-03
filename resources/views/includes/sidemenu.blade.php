@@ -26,10 +26,10 @@
     </div>
     <div class="social-icons">
       <a href="#">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
     <div class="location">
       <div class="address">
