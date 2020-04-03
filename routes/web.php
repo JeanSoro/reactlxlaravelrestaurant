@@ -83,3 +83,7 @@ Route::get('/admin/register', function(){
 Route::get('/admin/login', function(){
     return view('admin.login');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
