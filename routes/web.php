@@ -64,6 +64,14 @@ Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers'
 
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
 
+// ############################ADMIN USERS#################################
+
+Route::get('/admin/users', 'admin\UsersController@index');
+
+Route::get('/admin/users/create', 'admin\UsersController@create');
+
+Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
+
 // -------------------------------------
 // ***********AUTH ROUTES ADMIN***********
 // -------------------------------------
