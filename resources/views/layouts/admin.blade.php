@@ -128,7 +128,7 @@
                                     No userName
                                     
                                     @else
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->fname }} {{ Auth::user()->lname }}
                                     
                                     @endguest
                                        
