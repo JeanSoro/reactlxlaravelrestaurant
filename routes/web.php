@@ -76,6 +76,8 @@ Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
 
 Route::put('/admin/users/{id}/edit', 'admin\UsersController@update');
 
+Route::get('/admin/users/{id}/delete', 'admin\UsersController@delete');
+
 // -------------------------------------
 // ***********AUTH ROUTES ADMIN***********
 // -------------------------------------

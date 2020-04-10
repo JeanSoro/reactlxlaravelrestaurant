@@ -21,8 +21,8 @@ class CreateRoleUserTable extends Migration
         });
 
         Schema::table('role_user', function (Blueprint $table) {
-            $table->foreign('role_id')->references('id')->on('roles')->onCascade('delete');
-            $table->foreign('user_id')->references('id')->on('users')->onCascade('delete');
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
