@@ -45,25 +45,29 @@
                                   </tr>
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <th scope="row">1</th>
-                                      <td>Jen Doe</td>
-                                      <td>3/2/2020</td>
-                                      <td>
-                                        <a href="/admin/users/1/edit">
-                                          <i class="fas fa-edit"></i>
-                                        </a>
-                                      </td>
-
-                                      <td>
-                                        <a href="/admin/users/1/delete"
-                                          onclick="if (! confirm('Are You sure that you want to delete this user?')) {return false;}">
-                                          <i class="far fa-trash-alt"></i>
-                                        </a>
-                                      </td>
-                                  </tr>
+                                @foreach ($users as $user)
+                                    <tr>
+                                        <th scope="row">{{$user->id}}</th>
+                                        <td>{{$user->fname}} {{$user->lname}}</td>
+                                        <td>{{date('m/d/Y', strtotime($user->updated_at))}}</td>
+                                        <td>
+                                            <a href="/admin/users/{{$user->id}}/edit">
+                                            <i class="fas fa-edit"></i>
+                                            </a>
+                                        </td>
+    
+                                        <td>
+                                            <a href="/admin/users/{{$user->id}}/delete"
+                                            onclick="if (! confirm('Are You sure that you want to delete this user?')) {return false;}">
+                                            <i class="far fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                  
                               </tbody>
                           </table>
+                          {{ $users->links() }}
                       </div>
                   </div>
               </div>
