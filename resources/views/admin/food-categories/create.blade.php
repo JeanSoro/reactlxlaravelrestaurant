@@ -37,7 +37,7 @@
                         <div class="card-body">
                             <form action="#" id="basicform" data-parsley-validate="" novalidate="">
                                 <div class="form-group">
-                                    <label for="inputCategory">Catgeory Name</label>
+                                    <label for="inputCategory">Category Name</label>
                                     <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter a category name" autocomplete="off" class="form-control">
                                 </div>
 
