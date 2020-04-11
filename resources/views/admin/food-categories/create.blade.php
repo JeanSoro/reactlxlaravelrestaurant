@@ -35,18 +35,44 @@
                     <div class="card">
                         <h5 class="card-header">Create a new category</h5>
                         <div class="card-body">
-                            <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                            <form method="POST" action="/admin/food-categories">
+                                @csrf
                                 <div class="form-group">
-                                    <label for="inputCategory">Category Name</label>
-                                    <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter a category name" autocomplete="off" class="form-control">
+                                    <label for="inputTitle">Title</label>
+                                    
+                                    <input id="inputTitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus placeholder="title">
+                                    @error('title')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror       
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="inputCategoryImageUrl">Category Image URL</label>
-                                    <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://restaurant.com/img/pizzas.jpeg" autocomplete="off" class="form-control">
+                                    <label for="inputImageUrl">Image URL</label>
+                                    
+                                    <input id="inputImageUrl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" required autocomplete="image_url" autofocus placeholder="image_url">
+                                    @error('image_url')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror       
                                 </div>
-                               
-                               
+
+                                <div class="form-group">
+                                    <label for="inputDescription">Description</label>
+
+                                    <textarea id="inputDescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" autofocus placeholder="description">
+                                        {{ old('description') }}
+                                    </textarea>
+                                    @error('description')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror    
+                                </div>
+                                
+
                                 <div class="row">
                                     <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                         
