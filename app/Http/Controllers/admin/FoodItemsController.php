@@ -34,14 +34,18 @@ class FoodItemsController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'image_url' => ['required', 'string'],
+            'price' => ['required', 'integer'],
+            'category_id' => ['required', 'integer'],
             
         ]);
        
-        $category = new FoodItem();
-        $category->title = request('title');
-        $category->description = request('description');
-        $category->image_url = request('image_url');
-        $category->save();
+        $item = new FoodItem();
+        $item->title = request('title');
+        $item->description = request('description');
+        $item->image_url = request('image_url');
+        $item->price = request('price');
+        $item->category_id = request('category_id');
+        $item->save();
         
         return redirect('/admin/food-items');
 
@@ -49,9 +53,9 @@ class FoodItemsController extends Controller
 
     public function edit($id){
 
-        $category = FoodItem::find($id);
+        $item = FoodItem::find($id);
         return view('admin/food-items/edit', [
-            'category'=> $category
+            'item'=> $item
         ]);
     }
 
@@ -61,22 +65,26 @@ class FoodItemsController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'image_url' => ['required', 'string'],
+            'price' => ['required', 'integer'],
+            'category_id' => ['required', 'integer']
             
         ]);
 
-        $category = FoodItem::find($id);
-        $category->title = request('title');
-        $category->description = request('description');
-        $category->image_url = request('image_url');
-        $category->save();
+        $item = FoodItem::find($id);
+        $item->title = request('title');
+        $item->description = request('description');
+        $item->image_url = request('image_url');
+        $item->price = request('price');
+        $item->category_id = request('category_id');
+        $item->save();
 
         return redirect('/admin/food-items');
 
     }
 
     public function delete($id){
-        $category = FoodItem::find($id);
-        $category->delete();
+        $item = FoodItem::find($id);
+        $item->delete();
 
         return redirect('/admin/food-items');
     }
