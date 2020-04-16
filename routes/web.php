@@ -24,8 +24,11 @@ Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/about', 'StaticPagesController@about');
 
 Route::get('/offers', 'staticPagesController@offers');
+Route::post('/offers', 'staticPagesController@registerMember');
 
-Route::get('/giftcards', 'StaticPagesController@giftcards');
+Route::get('/offers/thank-you', 'staticPagesController@offersThankYou');
+
+// Route::get('/giftcards', 'StaticPagesController@giftcards');
 
 
 // ---------------------------------------------
@@ -51,7 +54,6 @@ Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@crea
 Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store');
 
 Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
-
 Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update');
 
 Route::get('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete');
