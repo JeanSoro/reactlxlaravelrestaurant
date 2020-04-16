@@ -59,7 +59,7 @@
 
                                 <div class="form-group">
                                     <label for="inputImageUrl">Image URL</label>
-                                    <input id="inputImageUrl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" required autocomplete="image_url" autofocus placeholder="image_url">
+                                    <input id="inputImageUrl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" autocomplete="image_url" autofocus placeholder="image_url">
                                     @error('image_url')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -80,7 +80,7 @@
 
                                 <div class="form-group">
                                     <label for="inputDescription">Description</label>
-                                    <textarea id="inputDescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" autofocus placeholder="description">
+                                    <textarea id="inputDescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="description">
                                         {{ old('description') }}
                                     </textarea>
                                     @error('description')
