@@ -35,22 +35,61 @@
                     <div class="card">
                         <h5 class="card-header">Create a new item</h5>
                         <div class="card-body">
-                            <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                            <form method="POST" action="/admin/food-items">
+                                @csrf
                                 <div class="form-group">
-                                    <label for="inputItem">Item Name</label>
-                                    <input id="inputItem" type="text" name="title" data-parsley-trigger="change" required="" placeholder="Enter an item name" autocomplete="off" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputItem">Price</label>
-                                    <input id="inputItem" type="text" name="price" data-parsley-trigger="change" required="" placeholder="Enter an item price" autocomplete="off" class="form-control">
+                                    <label for="inputTitle">Title</label>
+                                    <input id="inputTitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus placeholder="title">
+                                    @error('title')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror       
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="inputItemImageUrl">Item Image URL</label>
-                                    <input id="inputItemImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://restaurant.com/img/pizzas.jpeg" autocomplete="off" class="form-control">
+                                    <label for="inputPrice">Price</label>
+                                    <input id="inputPrice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus placeholder="price">
+                                    @error('price')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror       
                                 </div>
-                               
-                               
+
+                                <div class="form-group">
+                                    <label for="inputImageUrl">Image URL</label>
+                                    <input id="inputImageUrl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" required autocomplete="image_url" autofocus placeholder="image_url">
+                                    @error('image_url')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror       
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputCategory">Category</label>
+                                    <select name="category_id" class="form-control" id="inputCategory">
+                                        @foreach ($categories as $category)
+                                            <option value="{{$category->id}}">
+                                                {{$category->title}}
+                                            </option>    
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputDescription">Description</label>
+                                    <textarea id="inputDescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" autofocus placeholder="description">
+                                        {{ old('description') }}
+                                    </textarea>
+                                    @error('description')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror    
+                                </div>
+                                
                                 <div class="row">
                                     <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                         

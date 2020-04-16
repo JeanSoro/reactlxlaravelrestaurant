@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\FoodItem;
+use App\FoodCategory;
 
 class FoodItemsController extends Controller
 {
@@ -24,7 +25,10 @@ class FoodItemsController extends Controller
 
 
     public function create(){
-        return view('admin/food-items/create');
+        $categories = FoodCategory::All();
+        return view('admin/food-items/create', [
+            'categories' => $categories
+        ]);
     }
 
 
@@ -54,8 +58,11 @@ class FoodItemsController extends Controller
     public function edit($id){
 
         $item = FoodItem::find($id);
+        $categories = FoodCategory::All();
+        
         return view('admin/food-items/edit', [
-            'item'=> $item
+            'item'=> $item,
+            'categories'=> $categories
         ]);
     }
 
