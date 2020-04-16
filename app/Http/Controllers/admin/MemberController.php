@@ -16,14 +16,14 @@ class MemberController extends Controller
     public function index(){
         $members = Member::paginate(10);
        
-        return view('admin/members/all-members', [
+        return view('admin/members/all', [
             'members' => $members
         ]);
     }
 
 
     public function create(){
-        return view('admin/food-members/create');
+        return view('admin/members/create');
     }
 
 
@@ -42,14 +42,14 @@ class MemberController extends Controller
         $member->image_url = request('image_url');
         $member->save();
         
-        return redirect('/admin/food-members');
+        return redirect('/admin/members');
 
     }
 
     public function edit($id){
 
         $member = Member::find($id);
-        return view('admin/food-members/edit', [
+        return view('admin/members/edit', [
             'member'=> $member
         ]);
     }
@@ -69,7 +69,7 @@ class MemberController extends Controller
         $member->image_url = request('image_url');
         $member->save();
 
-        return redirect('/admin/food-members');
+        return redirect('/admin/members');
 
     }
 
@@ -77,6 +77,6 @@ class MemberController extends Controller
         $member = Member::find($id);
         $member->delete();
 
-        return redirect('/admin/food-members');
+        return redirect('/admin/members');
     }
 }
