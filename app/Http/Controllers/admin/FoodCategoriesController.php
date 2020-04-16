@@ -27,9 +27,10 @@ class FoodCategoriesController extends Controller
         return view('admin/food-categories/create');
     }
 
+
     public function store(){
 
-        equest()->validate([
+        request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'image_url' => ['required', 'string'],
