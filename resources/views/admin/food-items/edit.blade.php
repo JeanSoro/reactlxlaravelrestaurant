@@ -35,12 +35,12 @@
                     <div class="card">
                         <h5 class="card-header">Edit item</h5>
                         <div class="card-body">
-                            <form method="POST" action="/admin/food-items">
+                            <form method="POST" action="/admin/food-items/{{$item->id}}">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
                                     <label for="inputTitle">Title</label>
-                                    <input id="inputTitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus placeholder="title">
+                                    <input id="inputTitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title', $item->title) }}" required autocomplete="title" autofocus placeholder="title">
                                     @error('title')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -50,7 +50,7 @@
 
                                 <div class="form-group">
                                     <label for="inputPrice">Price</label>
-                                    <input id="inputPrice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus placeholder="price">
+                                    <input id="inputPrice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price', $item->price) }}" required autocomplete="price" autofocus placeholder="price">
                                     @error('price')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -60,7 +60,7 @@
 
                                 <div class="form-group">
                                     <label for="inputImageUrl">Image URL</label>
-                                    <input id="inputImageUrl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" autocomplete="image_url" autofocus placeholder="image_url">
+                                    <input id="inputImageUrl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url', $item->image_url) }}" autocomplete="image_url" autofocus placeholder="image_url">
                                     @error('image_url')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -72,7 +72,9 @@
                                     <label for="inputCategory">Category</label>
                                     <select name="category_id" class="form-control" id="inputCategory">
                                         @foreach ($categories as $category)
-                                            <option value="{{$category->id}}">
+                                            <option value="{{$category->id}}" @if ($category->id === $item->category_id)
+                                                selected
+                                            @endif>
                                                 {{$category->title}}
                                             </option>    
                                         @endforeach
@@ -81,8 +83,7 @@
 
                                 <div class="form-group">
                                     <label for="inputDescription">Description</label>
-                                    <textarea id="inputDescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="description">
-                                        {{ old('description') }}
+                                    <textarea id="inputDescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write a description">{{ old('description', $item->description) }}
                                     </textarea>
                                     @error('description')
                                         <span class="invalid-feedback" role="alert">

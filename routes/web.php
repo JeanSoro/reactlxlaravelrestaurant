@@ -68,7 +68,7 @@ Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 
 Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
 
-Route::put('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
+Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 // ############################CUSTOMERS#################################
 
