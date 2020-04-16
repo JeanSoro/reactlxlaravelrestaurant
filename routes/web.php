@@ -72,10 +72,12 @@ Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 // ############################CUSTOMERS#################################
 
-Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers');
+Route::get('/admin/members', 'admin\MemberController@index');
 
+// ############################MEMBERS#################################
+
+// ############################RESERVATIONS#################################
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
-
 // ############################ADMIN USERS#################################
 
 Route::get('/admin/users', 'admin\UsersController@index');
