@@ -73,8 +73,7 @@ Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 // ############################CUSTOMERS#################################
 
 Route::post('/offers', 'staticPagesController@registerMember');
-
-Route::get('/offers/thank-you', 'staticPagesController@offersThankYou');
+Route::get('/offers/thank-you', 'staticPagesController@thankYou');
 
 // ############################MEMBERS#################################
 
@@ -83,7 +82,8 @@ Route::get('/admin/members/{id}/delete', 'admin\MemberController@delete');
 
 // ############################RESERVATIONS#################################
 
-Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+Route::post('/reservations', 'StaticPagesController@saveReservation');
+Route::get('/reservations/thank-you', 'StaticPagesController@thankYou');
 
 // ############################ADMIN USERS#################################
 
