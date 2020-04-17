@@ -85,6 +85,10 @@ Route::get('/admin/members/{id}/delete', 'admin\MemberController@delete');
 Route::post('/reservations', 'StaticPagesController@saveReservation');
 Route::get('/reservations/thank-you', 'StaticPagesController@thankYou');
 
+Route::get('/admin/reservations', 'admin\ReservationController@index');
+Route::get('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
+
+
 // ############################ADMIN USERS#################################
 
 Route::get('/admin/users', 'admin\UsersController@index');

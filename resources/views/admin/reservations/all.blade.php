@@ -40,37 +40,41 @@
                                       <th scope="col">id</th>
                                       <th scope="col">Full Name</th>
                                       <th scope="col">Email</th>
-                                      <th scope="col">Phone Number</th>
-                                      <th scope="col">Guests otal</th>
-                                      <th scope="col">Date Created</th>
-                                      {{-- <th scope="col">Edit</th>
-                                      <th scope="col">Delete</th> --}}
+                                      <th scope="col">Contact</th>
+                                      <th scope="col">Guests</th>
+                                      <th scope="col">Time</th>
+                                      <th scope="col">Created on</th>
+                                      <th scope="col">Edit</th>
+                                      <th scope="col">Delete</th>
                                   </tr>
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <th scope="row">1</th>
-                                      <td>John Doe</td>
-                                      <td>john@street.com</td>
-                                      <td>416-245-5675</td>
-                                      <td>4</td>
-                                      <td>03/20/2020</td>
-
-                                      {{-- <td>
-                                        <a href="/admin/food-items/1/edit">
-                                          <i class="fas fa-edit"></i>
+                                @foreach ($reservations as $reservation)
+                                <tr>
+                                    <th scope="row">{{$reservation->id}}</th>
+                                    <td>{{$reservation->fname}} {{$reservation->lname}}</td>
+                                    <td>{{$reservation->email}}</td>
+                                    <td>{{$reservation->phone_number}}</td>
+                                    <td>{{$reservation->guests_total}}</td>
+                                    <td>{{$reservation->time}}</td>
+                                    <td>{{date('m/d/Y', strtotime($reservation->updated_at))}}</td>
+                                    <td>
+                                        <a href="/admin/reservations/{{$reservation->id}}/edit">
+                                        <i class="fas fa-edit"></i>
                                         </a>
-                                      </td>
+                                    </td>
 
-                                      <td>
-                                        <a href="/admin/food-items/1/delete"
-                                          onclick="if (! confirm('Are You sure that you want to delete this category?')) {return false;}">
-                                          <i class="far fa-trash-alt"></i>
+                                    <td>
+                                        <a href="/admin/reservations/{{$reservation->id}}/delete"
+                                        onclick="if (! confirm('Are You sure that you want to delete this reservation?')) {return false;}">
+                                        <i class="far fa-trash-alt"></i>
                                         </a>
-                                      </td> --}}
-                                  </tr>
-                              </tbody>
-                          </table>
+                                    </td>
+                                </tr>
+                            @endforeach
+                          </tbody>
+                      </table>
+                      {{ $reservations->links() }}
                       </div>
                   </div>
               </div>
