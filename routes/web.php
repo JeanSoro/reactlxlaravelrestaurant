@@ -11,9 +11,9 @@
 |
 */
 
-// -----------------------------------------
+// ------------------------------------------------
 // *************STATIC PAGES ROUTES***********
-// ----------------------------------------
+// --------------------------------------------------
 
 Route::get('/', 'StaticPagesController@home');
 
@@ -24,9 +24,7 @@ Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/about', 'StaticPagesController@about');
 
 Route::get('/offers', 'staticPagesController@offers');
-Route::post('/offers', 'staticPagesController@registerMember');
 
-Route::get('/offers/thank-you', 'staticPagesController@offersThankYou');
 
 // Route::get('/giftcards', 'StaticPagesController@giftcards');
 
@@ -74,12 +72,19 @@ Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 // ############################CUSTOMERS#################################
 
-Route::get('/admin/members', 'admin\MemberController@index');
+Route::post('/offers', 'staticPagesController@registerMember');
+
+Route::get('/offers/thank-you', 'staticPagesController@offersThankYou');
 
 // ############################MEMBERS#################################
 
+Route::get('/admin/members', 'admin\MemberController@index');
+Route::get('/admin/members/{id}/delete', 'admin\MemberController@delete');
+
 // ############################RESERVATIONS#################################
+
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+
 // ############################ADMIN USERS#################################
 
 Route::get('/admin/users', 'admin\UsersController@index');

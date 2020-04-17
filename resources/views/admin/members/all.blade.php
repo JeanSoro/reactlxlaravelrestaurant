@@ -52,12 +52,7 @@
                                             <td>{{$member->email}}</td>
                                             <td>{{$member->phone_number}}</td>
                                             <td>{{date('m/d/Y', strtotime($member->updated_at))}}</td>
-                                            <td>
-                                                <a href="/admin/members/{{$member->id}}/edit">
-                                                <i class="fas fa-edit"></i>
-                                                </a>
-                                            </td>
-
+                                        
                                             <td>
                                                 <a href="/admin/members/{{$member->id}}/delete"
                                                 onclick="if (! confirm('Are You sure that you want to delete this member?')) {return false;}">
@@ -68,6 +63,7 @@
                                 @endforeach
                               </tbody>
                           </table>
+                        {{ $members->links() }}
                       </div>
                   </div>
               </div>
