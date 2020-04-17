@@ -88,8 +88,9 @@ Route::get('/reservations/thank-you', 'StaticPagesController@thankYou');
 Route::get('/admin/reservations', 'admin\ReservationController@index');
 Route::get('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
 
-
+// ------------------------------------------------------------------------
 // ############################ADMIN USERS#################################
+// ------------------------------------------------------------------------
 
 Route::get('/admin/users', 'admin\UsersController@index');
 
@@ -103,9 +104,20 @@ Route::put('/admin/users/{id}', 'admin\UsersController@update');
 
 Route::get('/admin/users/{id}/delete', 'admin\UsersController@delete');
 
-// -------------------------------------
-// ***********AUTH ROUTES ADMIN***********
-// -------------------------------------
+// ############################ADMIN SETTINGS#################################
+
+Route::get('/admin/settings/general', 'admin\SettingsController@general');
+Route::post('/admin/settings/general', 'admin\SettingsController@saveGeneral');
+
+Route::get('/admin/settings/seo', 'admin\SettingsController@seo');
+Route::post('/admin/settings/seo', 'admin\SettingsController@saveSeo');
+
+Route::get('/admin/settings/social', 'admin\SettingsController@social');
+Route::post('/admin/settings/social', 'admin\SettingsController@saveSocial');
+
+// -------------------------------------------------
+// ***********AUTHENTICATION ROUTES ADMIN***********
+// -------------------------------------------------
 
 Route::get('/admin/register', function(){
     return view('admin.register');
