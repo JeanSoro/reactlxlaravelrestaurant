@@ -62,17 +62,23 @@ class ReservationController extends Controller
 
     public function update($id){
 
-         request()->validate([
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'image_url' => ['required', 'string'],
+        request()->validate([
+            'fname' => ['required', 'string'],
+            'lname' => ['required', 'string'],
+            'email' => ['required', 'string'],
+            'phone_number' => ['required', 'string'],
+            'guests_total' => ['required', 'string'],
+            'time' => ['required'],
             
         ]);
 
         $reservation = Reservation::find($id);
-        $reservation->title = request('title');
-        $reservation->description = request('description');
-        $reservation->image_url = request('image_url');
+        $reservation->fname = request('fname');
+        $reservation->lname = request('lname');
+        $reservation->email = request('email');
+        $reservation->phone_number = request('phone_number');
+        $reservation->guests_total = request('guests_total');
+        $reservation->time = request('time');
         $reservation->save();
 
         return redirect('/admin/reservations');
