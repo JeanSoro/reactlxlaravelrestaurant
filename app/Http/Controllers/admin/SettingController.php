@@ -56,7 +56,6 @@ class SettingController extends Controller
     }
 
 
-
     public function seo(){
 
         $id = 1;
@@ -82,6 +81,36 @@ class SettingController extends Controller
         $seo_setting->save();
 
         return redirect('/admin/settings/seo');
+
+    }
+
+    public function social(){
+
+        $id = 1;
+
+        $social_setting = SocialSetting::find($id);
+        return view('admin/settings/social', [
+            'social_setting'=> $social_setting
+        ]);
+    }
+
+    public function saveSocial(){
+
+        $id = 1;
+
+         request()->validate([
+            'facebook_url' => ['required', 'string'],
+            'twitter_url' => ['required', 'string'],      
+            'instagram_url' => ['required', 'string'],      
+        ]);
+
+        $social_setting = SocialSetting::find($id);
+        $social_setting->facebook_url = request('facebook_url');
+        $social_setting->twitter_url = request('twitter_url');
+        $social_setting->instagram_url = request('instagram_url');
+        $social_setting->save();
+
+        return redirect('/admin/settings/social');
 
     }
 

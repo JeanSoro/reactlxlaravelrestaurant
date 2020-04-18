@@ -37,18 +37,27 @@
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label for="inputDescription">Description</label>
-                                <textarea id="inputDescription" rows="4" cols="50" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus placeholder="site description">{{ old('description', $social_setting->description) }}</textarea>
-                                @error('description')
+                                <label for="inputFacebook">Facebook</label>
+                                <input id="inputFacebook" type="text" class="form-control form-control-lg @error('facebook_url') is-invalid @enderror" name="facebook_url" value="{{ old('facebook_url', $social_setting->facebook_url) }}"  autocomplete="facebook_url" autofocus placeholder="Add Facebook URL">
+                                @error('facebook_url')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror       
                             </div>
                             <div class="form-group">
-                                <label for="inputKeywords">Keywords</label>
-                                <textarea id="inputKeywords" rows="4" cols="50" type="text" class="form-control form-control-lg @error('keywords') is-invalid @enderror" name="keywords" required autocomplete="keywords" autofocus placeholder="Add keywords">{{ old('keywords', $social_setting->keywords) }}</textarea>
-                                @error('keywords')
+                                <label for="inputTwitter">Twitter</label>
+                                <input id="inputTwitter" type="text" class="form-control form-control-lg @error('twitter_url') is-invalid @enderror" name="twitter_url" value="{{ old('twitter_url', $social_setting->twitter_url) }}"  autocomplete="twitter_url" autofocus placeholder="Add Twitter URL">
+                                @error('twitter_url')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror       
+                            </div>
+                            <div class="form-group">
+                                <label for="inputInstagram">Instagram</label>
+                                <input id="inputInstagram" type="text" class="form-control form-control-lg @error('instagram_url') is-invalid @enderror" name="instagram_url" value="{{ old('instagram_url', $social_setting->instagram_url) }}"  autocomplete="instagram_url" autofocus placeholder="Add Instagram URL">
+                                @error('instagram_url')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
