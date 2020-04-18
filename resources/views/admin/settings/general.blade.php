@@ -56,7 +56,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress2">Apt/Suite/ect...</label>
-                                <input id="inputAddress2" type="text" class="form-control form-control-lg @error('address_2') is-invalid @enderror" name="address_2" value="{{ old('address_2', $general_setting->address_2) }}" required autocomplete="address_2" autofocus placeholder="Add Apt/Suite/ect... number">
+                                <input id="inputAddress2" type="text" class="form-control form-control-lg @error('address_2') is-invalid @enderror" name="address_2" value="{{ old('address_2', $general_setting->address_2) }}" autocomplete="address_2" autofocus placeholder="Add Apt/Suite/ect... number">
                                 @error('address_2')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
