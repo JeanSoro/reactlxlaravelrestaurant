@@ -92,7 +92,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputPhoneNumber">Phone Number</label>
-                                <input id="inputPhoneNumber" type="tel" class="form-control form-control-lg @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number', $general_setting->phone_number) }}" required autocomplete="phone_number" autofocus placeholder="Add a phone number">
+                                <input id="inputPhoneNumber" type="text" class="form-control form-control-lg @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number', $general_setting->phone_number) }}" required autocomplete="phone_number" autofocus placeholder="Add a phone number">
                                 @error('phone_number')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
