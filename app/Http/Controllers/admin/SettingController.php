@@ -99,9 +99,9 @@ class SettingController extends Controller
         $id = 1;
 
          request()->validate([
-            'facebook_url' => ['required', 'string'],
-            'twitter_url' => ['required', 'string'],      
-            'instagram_url' => ['required', 'string'],      
+            'facebook_url' => ['string'],
+            'twitter_url' => ['string'],      
+            'instagram_url' => ['string'],      
         ]);
 
         $social_setting = SocialSetting::find($id);

@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="col-sm-6 pl-0">
                                     <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-space btn-primary">Click To Edit</button>
                                     </p>
                                 </div>
                             </div>
