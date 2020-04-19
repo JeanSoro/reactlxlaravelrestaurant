@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+Burgers | {{$settings["general_settings"]->site_title}} 
+@endsection
+
 @section('content')
   <div id="single_menu-page">
     <div class="row">

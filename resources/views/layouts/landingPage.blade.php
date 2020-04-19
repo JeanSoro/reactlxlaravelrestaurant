@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>CMS Laravel</title>
+        {{-- <title>@yield('title')</title> --}}
         <meta name="description"
         content="{{$settings['seo_settings']->description}}">
         <meta name="robots" content="follow,index,max-snippet:-1,max-video-preview:-1,max-image-preview:large">

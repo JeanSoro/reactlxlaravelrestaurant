@@ -1,6 +1,8 @@
 @extends('layouts.landingPage')
 
 @section('title', 'Page Title')
+{{$settings["general_settings"]->site_title}} 
+@endsection
 
 @section('content')
 <section id="information">
