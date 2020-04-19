@@ -1,5 +1,9 @@
 <?php
 
+use App\GeneralSetting;
+use App\SocialSetting;
+use App\SeoSetting;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -130,3 +134,19 @@ Route::get('/admin/login', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 
+
+'pages/reservations', 'pages/thank-you', 'menu/index', 'menu/single-menu'], function($view){
+
+    $general_settings = GeneralSetting::find(1);
+    $social_settings = SocialSetting::find(1);
+    $seo_settings = SeoSetting::find(1);
+
+    $view->with('settings', [
+        "general_settings"=> $general_settings,
+        "social_settings" => $social_settings,
+        "seo_setting"=> $seo_settings
+    ]);
+
+});

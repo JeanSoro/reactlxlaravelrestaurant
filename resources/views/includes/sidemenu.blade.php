@@ -1,6 +1,6 @@
 <div class="welcome-menu">
     <a href="/" class="logo">
-      <img src="https://webstockreview.net/images/clipart-restaurant-restaurant-logo-5.png">
+      <img src="{{$settings["general_settings"]->logo_image_url}}">
     </a>
     <div class="menu">
       <div class="menu-title">
@@ -28,19 +28,24 @@
       </ul>
     </div>
     <div class="social-icons">
-      <a href="#">
+      <a href="{{$settings["social_settings"]->facebook_url}}" target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="{{$settings["social_settings"]->twitter_url}}" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="{{$settings["social_settings"]->instagram_url}}" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
     </div>
     <div class="location">
       <div class="address">
-        234 Main st,<br>
-        New York, New York 11747
+        {{$settings["general_settings"]->address_1}}<br>
+        {{$settings["general_settings"]->city}}, {{$settings["general_settings"]->province}} <br>
+        {{$settings["general_settings"]->postal_code}}
       </div>
       <div class="phone-number">
-        <a href="tel:7182198652">718-219-8652</a>
+        <a href="tel:{{$settings["general_settings"]->phone_number}}">{{$settings["general_settings"]->phone_number}}</a>
       </div>
     </div>
   </div>
