@@ -146,7 +146,7 @@ View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers',
     $view->with('settings', [
         "general_settings"=> $general_settings,
         "social_settings" => $social_settings,
-        "seo_setting"=> $seo_settings
+        "seo_settings"=> $seo_settings
     ]);
 
 });
