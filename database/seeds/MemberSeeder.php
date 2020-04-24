@@ -20,8 +20,8 @@ class MemberSeeder extends Seeder
                 'lname' => $faker->lastName,
                 'email' => $faker->email,
                 'phone_number'=>$faker->phoneNumber,
-                'updated_at'=> $faker->dateTimeThisMonth,
-                'created_at'=> $faker->dateTimeThisMonth
+                'updated_at'=> $faker->dateTimeThisMonth('now', 'America/New_York'),
+                'created_at'=> $faker->dateTimeThisMonth('now', 'America/New_York')
             ]);
         }
 
