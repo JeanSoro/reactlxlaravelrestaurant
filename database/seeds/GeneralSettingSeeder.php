@@ -19,8 +19,8 @@ class GeneralSettingSeeder extends Seeder
             'address_2'=> '',
             'city'=> 'Montreal',
             'province'=> 'QC',
-            'postal_code'=> 'h4b1u9',
-            'phone_number'=> '345-6781-121',
+            'postal_code'=> 'H4B1U9',
+            'phone_number'=> '514-6781-121',
             'updated_at'=> Carbon::now(),
             'created_at'=> Carbon::now()
         ]);
