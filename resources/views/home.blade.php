@@ -1,6 +1,6 @@
 @extends('layouts.landingPage')
 
-@section('title', 'Page Title')
+@section('title')
 {{$settings["general_settings"]->site_title}} 
 @endsection
 

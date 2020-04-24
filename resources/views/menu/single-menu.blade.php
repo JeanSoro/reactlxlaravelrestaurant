@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Burgers | {{$settings["general_settings"]->site_title}} 
+{{$food_item}} | {{$settings["general_settings"]->site_title}} 
 @endsection
 
 @section('content')
