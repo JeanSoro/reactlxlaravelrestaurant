@@ -49,7 +49,7 @@ Route::get('/menu/{slug}', 'StaticPagesController@singlemenu');
 
 Route::get('/admin', 'admin\AdminController@dashboard');
 
-Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:Admin, Employee');
 
 Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
 
