@@ -21,8 +21,14 @@
                   <div class="page-breadcrumb">
                       <nav aria-label="breadcrumb">
                           <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                              <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
+                              <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">
+                                @if(Auth::user()->isAdmin())
+                                    Last 30 Days Estimates
+                                @else
+                                    Latest Reservations
+                                @endif
+                              </li>
                           </ol>
                       </nav>
                   </div>
