@@ -48,6 +48,7 @@ Route::get('/menu/{slug}', 'StaticPagesController@singlemenu');
 
 
 Route::get('/admin', 'admin\AdminController@dashboard');
+Route::get('/admin/estimated-daily-revenue', 'admin\AdminController@dailyRevenueLast30');
 
 Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:Admin');
 
