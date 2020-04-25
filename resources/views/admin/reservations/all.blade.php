@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <div class="container-fluid  dashboard-content">
+  <div class="container-fluid dashboard-content">
       <!-- ============================================================== -->
       <!-- pageheader -->
       <!-- ============================================================== -->
@@ -30,10 +30,12 @@
               <!-- ============================================================== -->
               <!-- basic table -->
               <!-- ============================================================== -->
-              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+              <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                {{-- <div class="col-md-12 col-sm-12 col-12"> --}}
                   <div class="card">
                       <h5 class="card-header">Reservations</h5>
-                      <div class="card-body">
+                      <div class="card-body p-0">
+                          {{-- <div class="table-responsive"></div> --}}
                           <table class="table">
                               <thead>
                                   <tr>
@@ -43,7 +45,7 @@
                                       <th scope="col">Contact</th>
                                       <th scope="col">Guests</th>
                                       <th scope="col">Time</th>
-                                      <th scope="col">Created on</th>
+                                      <th scope="col">Created</th>
                                       <th scope="col">Edit</th>
                                       <th scope="col">Delete</th>
                                   </tr>
