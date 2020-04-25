@@ -94,7 +94,7 @@
                         <div id="morris_totalrevenue"></div>
                     </div>
                     <div class="card-footer">
-                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">${{$estimated_monthly_sales_amount}}</span><span class="text-success float-right">+9.45%</span></p>
+                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">Monthly Estimated Revenue ${{$estimated_monthly_sales_amount}}</span><span class="text-success float-right">+9.45%</span></p>
                     </div>
                 </div>
             </div>

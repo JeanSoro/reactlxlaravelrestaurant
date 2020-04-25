@@ -23,7 +23,7 @@ class AdminController extends Controller
        $estimated_monthly_sales_amount = DB::select(DB::raw('
 
             SELECT 
-                ( sum(guests_total) * 45 )as estimated_monthly_sales
+                ( sum(guests_total) * 800 )as estimated_monthly_sales
             FROM restaurant.reservations
             WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
 
