@@ -59,6 +59,9 @@ class AdminController extends Controller
 
         '));
 
+        
+        $latest_reservations = Reservation::where('guests_total', '>', 0)->limit(5)->orderBy('created_at', 'desc')->get();
+           
 
         $estimated_monthly_sales_amount =  $estimated_monthly_sales_amount[0]->estimated_monthly_sales;
         $total_reservations_last_thirty_days = $total_reservations_last_thirty_days[0]->monthly_reservations;
@@ -69,9 +72,12 @@ class AdminController extends Controller
             "estimated_monthly_sales_amount" => $estimated_monthly_sales_amount,
             "total_customers_last_thirty_days" => $total_customers_last_thirty_days,
             "total_reservations_last_thirty_days" => $total_reservations_last_thirty_days,
-            "total_number_of_employees_last_thirty_days" => $total_number_of_employees_last_thirty_days
+            "total_number_of_employees_last_thirty_days" => $total_number_of_employees_last_thirty_days,
+            "latest_reservations" => $latest_reservations
         ]);
     }
+
+
 
 
 

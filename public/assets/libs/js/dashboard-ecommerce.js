@@ -200,7 +200,6 @@ $("#sparkline-revenue4").sparkline([6, 5, 3, 4, 2, 5, 3, 8, 6, 4, 5, 1], {
 // Total Revenue
 // ============================================================== 
 $.get("/admin/estimated-daily-revenue", function (data) {
-    console.log(data)
 
     Morris.Area({
         element: 'morris_totalrevenue',
