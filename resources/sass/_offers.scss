@@ -1,6 +1,8 @@
 #offers-page {
 
     padding: 100px;
+    margin: 133px 50px;
+    overflow: hidden;
 
     h1 {
         color: #000;
@@ -16,9 +18,11 @@
         font-weight: 400;
     }
 
-    .thank-you{
-        h1,p{
-            text-align : center;
+    .thank-you {
+
+        h1,
+        p {
+            text-align: center;
         }
     }
 
@@ -58,7 +62,8 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 0px) and (max-width: 767px) {
     #offers-page {
-        padding: 20px;
+        padding: 15px;
+        margin: 80px 50px;
 
         h1 {
             font-size: 2rem;
@@ -69,12 +74,31 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
     #offers-page {
-        padding: 20px;
+        padding: 35px;
+        margin: 140px 50px;
+
+        .content-box {
+            background: #FFF;
+            padding: 40px;
+
+        }
+
     }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+    #offers-page {
+        padding: 35px;
+        margin: 140px 50px;
+
+    }
+}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200) {}
+@media (min-width: 1200px) {
+    // #offers-page {
+    //     padding: 20px;
+    //     margin: 140px 50px;
+    // }
+}

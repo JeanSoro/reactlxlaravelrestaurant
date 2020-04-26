@@ -19,7 +19,7 @@
           officia
           fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
           et
-          similique!</p>
+          similique! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolorum placeat porro eligendi ratione magni nisi quae tempora, harum architecto.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad officia
           fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
           et
@@ -27,7 +27,7 @@
           officia
           fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
           et
-          similique!</p>
+          similique! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus dicta ducimus iste officia facilis eveniet. Illum, eveniet! Cumque, iusto est.</p>
       </div>
       <a href="#" class="about-link">
         <span>Learn more about restaurants</span>

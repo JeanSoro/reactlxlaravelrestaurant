@@ -11067,6 +11067,7 @@ table {
 
 #about-page {
   padding: 100px;
+  margin: 90px 50px;
 }
 
 #about-page h1 {
@@ -11092,11 +11093,19 @@ table {
 @media (min-width: 768px) and (max-width: 991px) {
   #about-page {
     padding: 20px;
+    margin: 90px 50px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #about-page {
+    padding: 20px;
   }
 }
 
 #contact-page {
   padding: 100px;
+  margin: 89px 50px;
 }
 
 #contact-page h1 {
@@ -11130,13 +11139,21 @@ table {
 
 @media (min-width: 0px) and (max-width: 767px) {
   #contact-page {
-    padding: 20px;
+    padding: 15px;
+    margin: 9px 50px;
+  }
+
+  #contact-page h1,
+  #contact-page h3,
+  #contact-page p {
+    text-align: center;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   #contact-page {
-    padding: 20px;
+    padding: 35px;
+    margin: 134px 50px;
   }
 }
 
@@ -11196,6 +11213,8 @@ table {
 
 #offers-page {
   padding: 100px;
+  margin: 133px 50px;
+  overflow: hidden;
 }
 
 #offers-page h1 {
@@ -11239,7 +11258,8 @@ table {
 
 @media (min-width: 0px) and (max-width: 767px) {
   #offers-page {
-    padding: 20px;
+    padding: 15px;
+    margin: 80px 50px;
   }
 
   #offers-page h1 {
@@ -11249,7 +11269,20 @@ table {
 
 @media (min-width: 768px) and (max-width: 991px) {
   #offers-page {
-    padding: 20px;
+    padding: 35px;
+    margin: 140px 50px;
+  }
+
+  #offers-page .content-box {
+    background: #FFF;
+    padding: 40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #offers-page {
+    padding: 35px;
+    margin: 140px 50px;
   }
 }
 
@@ -11365,13 +11398,12 @@ body {
 #welcome {
   display: grid;
   width: 100%;
-  height: 100vh;
 }
 
 #welcome .welcome-menu {
   background: white;
   padding: 50px;
-  position: absolute;
+  position: absolute !important;
   height: 100vh;
   width: 300px;
 }
@@ -11405,7 +11437,7 @@ body {
   color: black;
   font-weight: 700;
   text-decoration: none;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.5rem;
   display: block;
   transition: color 0.3s ease-in-out;
 }
@@ -11416,6 +11448,7 @@ body {
 
 #welcome .welcome-menu .social-icons {
   display: flex;
+  margin-bottom: 50px;
 }
 
 #welcome .welcome-menu .social-icons a {
@@ -11434,19 +11467,19 @@ body {
 
 #welcome .welcome-menu .location {
   align-self: center;
-  position: absolute;
-  bottom: 100px;
+  position: relative !important;
+  bottom: -20px;
 }
 
 #welcome .welcome-menu .location .address {
   color: #7a8d99;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   line-height: 1.7;
 }
 
 #welcome .welcome-menu .location .phone-number a {
   color: #0971ce;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -11465,7 +11498,6 @@ body {
 #information {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100vh;
 }
 
 #information .restaurant-image {
@@ -11492,7 +11524,7 @@ body {
   line-height: 1.7;
   color: #525e66;
   font-size: 1.1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 }
 
 #information .info .about-link {
@@ -11503,6 +11535,7 @@ body {
   text-decoration: none;
   color: black;
   font-weight: 700;
+  margin-bottom: -20px;
 }
 
 #information .info .about-link span {
@@ -11550,6 +11583,12 @@ body {
   padding: 15px;
   border-radius: 30px;
   margin-bottom: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+#food-preview .button-rounded:hover {
+  cursor: pointer;
+  background: black;
 }
 
 #food-preview .container {

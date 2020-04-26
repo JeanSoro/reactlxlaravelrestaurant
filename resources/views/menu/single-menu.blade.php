@@ -11,7 +11,7 @@
           <div class="content-box">
               <div class="row">
                 <div class="col-md-12">
-                  <h1>Burgers</h1>
+                  <h1>{{$food_item}}</h1>
                 </div>
                 <div class="col-md-6">
                   <div class="item">

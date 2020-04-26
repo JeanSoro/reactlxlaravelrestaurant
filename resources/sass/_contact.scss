@@ -1,6 +1,8 @@
 #contact-page {
 
     padding: 100px;
+    margin: 89px 50px;
+
 
     h1 {
         color: #000;
@@ -42,14 +44,22 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 0px) and (max-width: 767px) {
     #contact-page {
-        padding: 20px;
+        padding: 15px;
+        margin: 9px 50px;
+
+        h1,
+        h3,
+        p {
+            text-align: center;
+        }
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
     #contact-page {
-        padding: 20px;
+        padding: 35px;
+        margin: 134px 50px;
     }
 }
 
