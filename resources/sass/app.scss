@@ -280,7 +280,7 @@ body {
 
     .container {
         width: 100%;
-        max-width: 1100px;
+        max-width: 1400px;
         position: relative;
 
         .left-btn,
@@ -310,7 +310,7 @@ body {
 
     .food-slider {
         width: 100%;
-        max-width: 1100px;
+        max-width: 1400px;
         // max-width: 1400px;
         // display: flex;
         // margin-bottom: 2rem;
@@ -319,8 +319,10 @@ body {
         font-size: 0;
 
         .sliding-system {
-            white-space: nowrap;
+            white-space: nowrap !important;
             transform: translate3d(-0%, 0, 0);
+            transition: all .3s ease-in-out;
+
         }
 
         .slide {
@@ -331,7 +333,6 @@ body {
             display: inline-block;
             white-space: normal;
 
-            // border-right: 1px solid #e9f0f4;
             &:hover {
                 .background {
                     background: rgb(245, 156, 46);
@@ -431,6 +432,7 @@ h2 {
             padding: 20px;
             width: 100%;
             transform: translate3d(0, 0, 0);
+            overflow-y: scroll;
         }
     }
 
@@ -440,7 +442,6 @@ h2 {
 
         .info {
             padding: 20px;
-
 
             .about-link {
                 span {
@@ -454,34 +455,52 @@ h2 {
             }
         }
 
-        #food-preview {
-            padding: 20px;
-            width: 100%;
-            overflow: hidden;
 
-            .button-rounded {
-                margin-bottom: 2rem;
-            }
+    }
 
-            .container {
-                .left-btn {
-                    left: -20px;
-                }
+    #food-preview {
+        padding: 20px;
+        width: 100%;
+        overflow: auto;
 
-                .right-btn {
-                    left: -20px;
-                }
-            }
+        .food-slider {
 
-            h2 {
-                font-size: 2rem;
-                line-height: 1.4;
-            }
+            .sliding-system {
+                white-space: normal !important;
+                transform: translate3d(-0%, 0, 0);
 
-            .food-slider {
+
                 .slide {
-                    width: 100%;
+                    margin-bottom: 1rem;
+
                 }
+            }
+        }
+
+        .button-rounded {
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            .left-btn {
+                left: -20px;
+                display: none;
+            }
+
+            .right-btn {
+                right: -20px;
+                display: none;
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+
+        .food-slider {
+            .slide {
+                width: 100%;
             }
         }
     }
@@ -528,35 +547,36 @@ h2 {
             }
         }
 
-        #food-preview {
-            padding: 20px;
-            width: 100%;
-            overflow: hidden;
+    }
 
-            .button-rounded {
-                margin-bottom: 2rem;
+    #food-preview {
+        padding: 20px;
+        width: 100%;
+        // overflow: hidden;
+
+        .button-rounded {
+            margin-bottom: 2rem;
+        }
+
+
+        .container {
+            .left-btn {
+                left: -20px;
             }
 
-
-            .container {
-                .left-btn {
-                    left: -20px;
-                }
-
-                .right-btn {
-                    left: -20px;
-                }
+            .right-btn {
+                left: -20px;
             }
+        }
 
-            h2 {
-                font-size: 2rem;
-                line-height: 1.4;
-            }
+        h2 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
 
-            .food-slider {
-                .slide {
-                    width: 50%;
-                }
+        .food-slider {
+            .slide {
+                width: 50%;
             }
         }
     }

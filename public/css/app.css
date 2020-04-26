@@ -11593,7 +11593,7 @@ body {
 
 #food-preview .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   position: relative;
 }
 
@@ -11623,15 +11623,16 @@ body {
 
 #food-preview .food-slider {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   overflow: hidden;
   position: relative;
   font-size: 0;
 }
 
 #food-preview .food-slider .sliding-system {
-  white-space: nowrap;
+  white-space: nowrap !important;
   transform: translate3d(0%, 0, 0);
+  transition: all 0.3s ease-in-out;
 }
 
 #food-preview .food-slider .slide {
@@ -11726,6 +11727,7 @@ h2 {
     padding: 20px;
     width: 100%;
     transform: translate3d(0, 0, 0);
+    overflow-y: scroll;
   }
 
   #information {
@@ -11746,30 +11748,41 @@ h2 {
     font-size: 1rem;
   }
 
-  #information #food-preview {
+  #food-preview {
     padding: 20px;
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
   }
 
-  #information #food-preview .button-rounded {
+  #food-preview .food-slider .sliding-system {
+    white-space: normal !important;
+    transform: translate3d(0%, 0, 0);
+  }
+
+  #food-preview .food-slider .sliding-system .slide {
+    margin-bottom: 1rem;
+  }
+
+  #food-preview .button-rounded {
     margin-bottom: 2rem;
   }
 
-  #information #food-preview .container .left-btn {
+  #food-preview .container .left-btn {
     left: -20px;
+    display: none;
   }
 
-  #information #food-preview .container .right-btn {
-    left: -20px;
+  #food-preview .container .right-btn {
+    right: -20px;
+    display: none;
   }
 
-  #information #food-preview h2 {
+  #food-preview h2 {
     font-size: 2rem;
     line-height: 1.4;
   }
 
-  #information #food-preview .food-slider .slide {
+  #food-preview .food-slider .slide {
     width: 100%;
   }
 }
@@ -11810,30 +11823,29 @@ h2 {
     grid-template-columns: 50% 50%;
   }
 
-  #information #food-preview {
+  #food-preview {
     padding: 20px;
     width: 100%;
-    overflow: hidden;
   }
 
-  #information #food-preview .button-rounded {
+  #food-preview .button-rounded {
     margin-bottom: 2rem;
   }
 
-  #information #food-preview .container .left-btn {
+  #food-preview .container .left-btn {
     left: -20px;
   }
 
-  #information #food-preview .container .right-btn {
+  #food-preview .container .right-btn {
     left: -20px;
   }
 
-  #information #food-preview h2 {
+  #food-preview h2 {
     font-size: 2rem;
     line-height: 1.4;
   }
 
-  #information #food-preview .food-slider .slide {
+  #food-preview .food-slider .slide {
     width: 50%;
   }
 }
