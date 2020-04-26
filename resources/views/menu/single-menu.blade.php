@@ -13,52 +13,19 @@
                 <div class="col-md-12">
                   <h1>{{$food_item}}</h1>
                 </div>
+              @foreach($foodItems as $item)
                 <div class="col-md-6">
                   <div class="item">
-                      <div class="title">
-                          <h4>Texas burgers</h4>
-                          <span class="price">$10</span>
-                      </div>
-                      <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-                      </div>
+                    <div class="title">
+                        <h4>{{$item->title}}</h4>
+                        <span class="price">${{$item->price}}</span>
+                    </div>
+                    <div class="description">
+                      <p>{{$item->description}}</p>
                     </div>
                   </div>
-                <div class="col-md-6">
-                  <div class="item">
-                      <div class="title">
-                          <h4>Texas burgers</h4>
-                          <span class="price">$10</span>
-                      </div>
-                      <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-                      </div>
-                    </div>
-                  </div>
-                <div class="col-md-6">
-                  <div class="item">
-                      <div class="title">
-                          <h4>Texas burgers</h4>
-                          <span class="price">$10</span>
-                      </div>
-                      <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-                      </div>
-                    </div>
-                  </div>
-                <div class="col-md-6">
-                  <div class="item">
-                      <div class="title">
-                          <h4>Texas burgers</h4>
-                          <span class="price">$10</span>
-                      </div>
-                      <div class="description">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-                      </div>
-                    </div>
-                  </div>
-
-              </div>
+                </div>
+              @endforeach
            </div> 
       </div>
     </div>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Member;
 use App\Reservation;
 use App\FoodCategory;
+use App\FoodItem;
 
 class StaticPagesController extends Controller
 
@@ -93,9 +94,12 @@ class StaticPagesController extends Controller
     }
 
     public function singlemenu($slug){
-        $categories = FoodCategory::where('title', '=', $slug);
+        $foodCategory = FoodCategory::where('title', '=', $slug)->first();
+        $foodItems = FoodItem::where('category_id', '=', $foodCategory->id)->get();
+
         return view('menu/single-menu', [
-            "food_item" => ucfirst($slug)
+            "food_item" => ucfirst($slug),
+            "foodItems"=> $foodItems
         ]);
     }
 
