@@ -318,6 +318,7 @@ body {
         position: relative;
         font-size: 0;
 
+
         .sliding-system {
             white-space: nowrap !important;
             transform: translate3d(-0%, 0, 0);
@@ -552,7 +553,6 @@ h2 {
     #food-preview {
         padding: 20px;
         width: 100%;
-        // overflow: hidden;
 
         .button-rounded {
             margin-bottom: 2rem;
