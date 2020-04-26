@@ -11105,7 +11105,13 @@ table {
 
 #contact-page {
   padding: 100px;
-  margin: 89px 50px;
+  margin: 125px 50px;
+}
+
+#contact-page h1,
+#contact-page h3,
+#contact-page p {
+  text-align: center;
 }
 
 #contact-page h1 {
@@ -11113,6 +11119,7 @@ table {
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 #contact-page h3 {
@@ -11140,7 +11147,7 @@ table {
 @media (min-width: 0px) and (max-width: 767px) {
   #contact-page {
     padding: 15px;
-    margin: 9px 50px;
+    margin: 45px 40px;
   }
 
   #contact-page h1,
@@ -11152,8 +11159,14 @@ table {
 
 @media (min-width: 768px) and (max-width: 991px) {
   #contact-page {
-    padding: 35px;
-    margin: 134px 50px;
+    padding: 40px;
+    margin: 160px 50px;
+  }
+
+  #contact-page h1,
+  #contact-page h3,
+  #contact-page p {
+    text-align: center;
   }
 }
 
@@ -11569,6 +11582,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 51px 10px;
 }
 
 #food-preview h2 {
