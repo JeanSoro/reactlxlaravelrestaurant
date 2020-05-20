@@ -24,7 +24,7 @@ class AdminController extends Controller
 
             SELECT 
                 ( sum(guests_total) * 800 )as estimated_monthly_sales
-            FROM restaurant.reservations
+            FROM reservations
             WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
 
         '));
@@ -34,7 +34,7 @@ class AdminController extends Controller
 
             SELECT 
                 count(*) as monthly_reservations
-            FROM restaurant.reservations
+            FROM reservations
             WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
 
         '));
@@ -43,7 +43,7 @@ class AdminController extends Controller
 
             SELECT 
                 sum(guests_total) as monthly_number_guests
-            FROM restaurant.reservations
+            FROM reservations
             WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
 
         '));
@@ -90,7 +90,7 @@ class AdminController extends Controller
         //         ( sum(guests_total) * 45 )as estimated_earnings,
         //         count(*) as total_reservations,
         //         sum(guests_total)
-        //     FROM restaurant.reservations
+        //     FROM reservations
         //     group by reserved_day desc;
 
         // '));
@@ -100,7 +100,7 @@ class AdminController extends Controller
             SELECT 
                 DATE_FORMAT(created_at, "%Y-%m-%d") as x,
                 ( sum(guests_total) * 45 )as y
-            FROM restaurant.reservations
+            FROM reservations
             group by x desc;
 
         '));
