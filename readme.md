@@ -5,7 +5,7 @@ https://consulate-restaurant.herokuapp.com/admin
 email: jill@gmail.com
 password: 12345678
 
-Use dashboard to create new menu items, new category, upload menu photos, create employee profiles wih either admin role to have access to private information, or regular access to view information such as reservations list.
+Use backend dashboard to create new menu items, new category, upload menu photos, create employee profiles wih either admin role to have access to private information, or regular access to view information such as reservations list.
 
 ## License
 
