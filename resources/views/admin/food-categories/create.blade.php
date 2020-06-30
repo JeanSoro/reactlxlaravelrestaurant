@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid  dashboard-content">
+<div class="container-fluid dashboard-content">
         <!-- ============================================================== -->
         <!-- pageheader -->
         <!-- ============================================================== -->

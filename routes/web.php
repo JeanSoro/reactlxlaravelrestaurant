@@ -125,11 +125,11 @@ Route::put('/admin/settings/social', 'admin\SettingController@saveSocial')->midd
 // -------------------------------------------------
 
 Route::get('/admin/register', function(){
-    return view('admin.register');
+    return view('auth/register');
 });
 
 Route::get('/admin/login', function(){
-    return view('admin.login');
+    return view('auth.login');
 });
 
 Auth::routes();

@@ -9,6 +9,7 @@ use App\Member;
 use App\Reservation;
 use DB;
 
+//Dashboard controller
 class AdminController extends Controller
 {
 

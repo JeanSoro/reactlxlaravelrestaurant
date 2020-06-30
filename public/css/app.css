@@ -11226,7 +11226,7 @@ table {
 
 #offers-page {
   padding: 100px;
-  margin: 133px 50px;
+  margin: 150px 50px;
   overflow: hidden;
 }
 
@@ -11337,6 +11337,7 @@ table {
 
 #single_menu-page {
   padding: 100px;
+  margin: 250px 50px;
 }
 
 #single_menu-page h1 {
@@ -11367,6 +11368,7 @@ table {
 @media (min-width: 0px) and (max-width: 767px) {
   #single_menu-page {
     padding: 20px;
+    margin: 303px 50px;
   }
 }
 
