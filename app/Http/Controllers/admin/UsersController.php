@@ -47,6 +47,7 @@ class UsersController extends Controller
         $user->email = request('email');
         $user->password = Hash::make(request('password'));
         $user->save();
+        //user belongs to many roles relationship set in User model
         $user->roles()->attach(request('role_id'));
         
         return redirect('/admin/users');
@@ -79,7 +80,12 @@ class UsersController extends Controller
         $user->email = request('email');
         $user->password = Hash::make(request('password'));
         $user->save();
+         //if multiple roles for one user, use syncWithoutDetaching to avoid dropping previous roles
+        // $user->roles()->syncWithoutDetaching([request('role_id')]);
         $user->roles()->sync([request('role_id')]);
+
+         //use to debugg laravel code
+        // return request();
         
         return redirect('/admin/users');
 
