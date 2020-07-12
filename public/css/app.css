@@ -11427,6 +11427,7 @@ table {
 body {
   line-height: 1;
   background: white;
+  overflow-x: hidden;
 }
 
 ol,
@@ -11459,6 +11460,7 @@ body {
 #welcome {
   display: grid;
   width: 100%;
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -11527,15 +11529,9 @@ body {
   margin-right: 10px;
 }
 
-#welcome .welcome-menu .location {
-  align-self: center;
-  position: relative !important;
-  bottom: -20px;
-}
-
 #welcome .welcome-menu .location .address {
   color: #7a8d99;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   line-height: 1.7;
 }
 
@@ -11564,11 +11560,12 @@ body {
 
 #information .restaurant-image {
   overflow: hidden;
-  height: 100%;
+  height: auto;
 }
 
 #information .restaurant-image img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 #information .info {
@@ -11629,7 +11626,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 20px 10px;
 }
 
 #food-preview h2 {
@@ -11802,6 +11798,10 @@ h2 {
     padding: 20px;
   }
 
+  #information .info .about-link {
+    margin-bottom: 20px;
+  }
+
   #information .info .about-link span {
     width: 50%;
   }
@@ -11809,6 +11809,7 @@ h2 {
   #information .info .paragraphs {
     grid-template-columns: 1fr;
     font-size: 1rem;
+    margin-bottom: 35px;
   }
 
   #food-preview {
@@ -11843,6 +11844,7 @@ h2 {
   #food-preview h2 {
     font-size: 2rem;
     line-height: 1.4;
+    margin: 25px 0;
   }
 
   #food-preview .food-slider .slide {
@@ -11878,12 +11880,17 @@ h2 {
     padding: 20px;
   }
 
+  #information .info .about-link {
+    margin-bottom: 25px;
+  }
+
   #information .info .about-link span {
     width: 50%;
   }
 
   #information .info .paragraphs {
     grid-template-columns: 50% 50%;
+    margin-bottom: 50px;
   }
 
   #food-preview {
@@ -11906,6 +11913,7 @@ h2 {
   #food-preview h2 {
     font-size: 2rem;
     line-height: 1.4;
+    margin: 30px 0;
   }
 
   #food-preview .food-slider .slide {

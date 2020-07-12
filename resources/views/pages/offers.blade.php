@@ -9,7 +9,7 @@ Offers | {{$settings["general_settings"]->site_title}}
       <div class="content-box">
           <div class="row">
               <div class="col-md-8 offset-md-2">
-                <h1 class="text-center">Sign Up for Special Offers</h1>
+                <h1 class="text-center">Sign Up for Exclusive Offers</h1>
                 <form method="POST" action="/offers">
                   @csrf
                   <div class="row">

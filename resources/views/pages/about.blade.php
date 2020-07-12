@@ -13,7 +13,7 @@ Mdrn Bites was established in 2019 and is the hot new spot for all crowds, young
       <div class="content-box">
           <div class="row">
               <div class="col-md-6">
-                <h1>About Page</h1>
+                <h1>The Consulate</h1>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit molestias quasi, accusantium amet nihil minus mollitia totam nesciunt delectus quia quaerat enim, ea ipsam laboriosam, voluptatibus quisquam ratione. Dolorem nesciunt quam veritatis, quas quo magnam. Sunt consequatur in quam, doloribus quo delectus sapiente amet vero ad totam maiores laborum nesciunt temporibus id nemo ratione, quia eaque quidem nihil placeat repudiandae minus animi esse? Impedit, quo nobis. Consequuntur, placeat nostrum commodi assumenda pariatur aspernatur.
                 </p>
