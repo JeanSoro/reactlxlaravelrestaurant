@@ -1,6 +1,6 @@
 #menu-page {
 
-    padding: 100px;
+    padding: 145px;
 
     #food-preview {
         padding: 0;
@@ -8,24 +8,29 @@
 
         h2 {
             color: #FFF;
-            text-transform: uppercase;
+            text-transform: capitalize;
         }
 
         .right-btn,
         .left-btn {
-            background: #000;
+            background: #FFF;
+            color: #8EC5FC;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+               background: rgb(192,192,192);
+               color: #FFF;
+            }
         }
 
         .food-slider {
 
-
-            .sliding-system {}
-
-            .slide {
+            .sliding-system {
+                .slide {
 
                 &:hover {
                     .background {
-                        background: #000;
+                        background: rgb(192,192,192);
                         transform: translate3d(0, -200px, 0);
                     }
 
@@ -33,6 +38,9 @@
                 }
 
             }
+            }
+
+            
 
         }
 
@@ -51,7 +59,7 @@
     #menu-page {
         padding: 20px;
 
-       
+
     }
 }
 

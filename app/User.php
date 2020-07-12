@@ -42,6 +42,7 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role');
     }
 
+    // check if user has role of admin
     public function isAdmin(){
         if($this->roles->contains(1)){
             return true;

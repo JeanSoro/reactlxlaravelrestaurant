@@ -7,7 +7,7 @@
 @section('content')
 <section id="information">
     <div class="restaurant-image">
-      <img src="img/top-down.jpg">
+      <img src="img/top-down-2.jpg">
     </div>
     <div class="info">
       <h2>We Started From The Bottom In 1987</h2>
@@ -29,8 +29,8 @@
           et
           similique! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus dicta ducimus iste officia facilis eveniet. Illum, eveniet! Cumque, iusto est.</p>
       </div>
-      <a href="#" class="about-link">
-        <span>Learn more about restaurants</span>
+      <a href="/about" class="about-link">
+        <span>Learn more about us!</span>
         <div class="circle-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
       </a>
     </div>

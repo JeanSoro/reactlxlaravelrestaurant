@@ -1,5 +1,5 @@
 <section id="food-preview">
-    <h2>We have everything you need to kill your hunger</h2>
+    <h2>Here to fullfil all of your cravings!</h2>
    
     <div class="container">
       <div class="left-btn">

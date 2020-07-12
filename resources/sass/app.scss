@@ -7,7 +7,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700");
 @import "reset";
 @import "home";
 @import "about";
@@ -48,7 +48,7 @@ table {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 #welcome {
@@ -56,6 +56,7 @@ body {
     // grid-template-columns: 350px 1fr;
     width: 100%;
     // height: 100vh;
+    overflow-x: hidden;
 
 
 
@@ -73,7 +74,7 @@ body {
             margin-bottom: 50px;
 
             img {
-                max-width: 100px;
+                max-width: 180px;
             }
         }
 
@@ -82,7 +83,7 @@ body {
 
             .menu-title {
                 text-transform: uppercase;
-                color: #0971ce;
+                color: #8EC5FC;
                 font-weight: 700;
                 font-size: 1.2rem;
                 border-bottom: 1px solid #e2eaef;
@@ -101,10 +102,10 @@ body {
                         text-decoration: none;
                         margin-bottom: 1.5rem;
                         display: block;
-                        transition: color .3s ease-in-out;
+                        transition: color .2s ease-in-out;
 
                         &:hover {
-                            color: red;
+                            color: #8EC5FC;
 
                         }
                     }
@@ -145,7 +146,7 @@ body {
 
             .phone-number {
                 a {
-                    color: #0971ce;
+                    color: #8EC5FC;
                     font-size: 1.8rem;
                     font-weight: 700;
                     text-decoration: none;
@@ -161,17 +162,20 @@ body {
         // justify-content: center;
         // align-items: center;
         // flex-direction: column;
-        background: #ed4852;
+        // background: #ed4852;
+        background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        
         /* Old browsers */
-        background: -moz-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%);
+        // background: -moz-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%);
         /* FF3.6-15 */
-        background: -webkit-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%);
+        // background: -webkit-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+        // background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         // overflow: hidden;
         // padding: 100px;
-
+        
     }
 }
 
@@ -218,6 +222,7 @@ body {
             color: black;
             font-weight: 700;
             margin-bottom: -20px;
+            text-transform: capitalize;
 
             span {
                 margin-right: 20px;
@@ -230,13 +235,9 @@ body {
                 height: 40px;
                 width: 40px;
                 border-radius: 50%;
-                background: #ed4852;
-                /* Old browsers */
-                background: -moz-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%);
-                /* FF3.6-15 */
-                background: -webkit-radial-gradient(center, ellipse cover, #ed4852 0%, #9c1b24 100%);
-                /* Chrome10-25,Safari5.1-6 */
-                background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+                background-color: #8EC5FC;
+                background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+                
 
                 /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                 .fa-chevron-right {
@@ -255,12 +256,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 51px 10px;
+    margin: 20px 10px;
 
 
     h2 {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
+        text-transform: capitalize;
+        
     }
 
     .button-rounded {
@@ -287,7 +290,8 @@ body {
 
         .left-btn,
         .right-btn {
-            background: red;
+             background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
             color: white;
             height: 50px;
             width: 50px;
@@ -338,7 +342,7 @@ body {
 
             &:hover {
                 .background {
-                    background: rgb(245, 156, 46);
+                    background: rgb(192,192,192);
                     transform: translate3d(0, -200px, 0);
                 }
 
@@ -377,10 +381,11 @@ body {
 
 
                 .food-title {
-                    color: #ed4852;
+                    color: #8EC5FC;
                     font-size: 2rem;
                     font-weight: 900;
                     margin-bottom: 2rem;
+                    text-transform: uppercase;
                     // transition: all .3s ease-in-out;
                 }
 
@@ -425,17 +430,17 @@ h2 {
 
         .welcome-jumbo {
             max-width: 100vw;
-            padding: 20px;
+            padding: 5px;
             width: 100%;
             transform: translate3d(0, 0, 0);
         }
 
         #content-section {
             max-width: 100vw;
-            padding: 20px;
+            padding: 5px;
             width: 100%;
             transform: translate3d(0, 0, 0);
-            overflow-y: scroll;
+            // overflow-y: scroll;
         }
     }
 
@@ -518,14 +523,15 @@ h2 {
 
         .welcome-jumbo {
             max-width: 100vw;
-            padding: 20px;
+            // padding: 20px;
+            padding: 5px;
             width: 100%;
             transform: translate3d(0, 0, 0);
         }
 
         #content-section {
             max-width: 100vw;
-            padding: 20px;
+            padding: 5px;
             width: 100%;
             transform: translate3d(0, 0, 0);
         }

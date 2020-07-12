@@ -53,7 +53,6 @@ Route::get('/admin/estimated-daily-revenue', 'admin\AdminController@dailyRevenue
 Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:Admin');
 
 Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create')->middleware('role:Admin');
-
 Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store')->middleware('role:Admin');
 
 Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit')->middleware('role:Admin');
@@ -66,11 +65,9 @@ Route::get('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController
 Route::get('/admin/food-items', 'admin\FoodItemsController@index')->middleware('role:Admin');
 
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create')->middleware('role:Admin');
-
 Route::post('/admin/food-items', 'admin\FoodItemsController@store')->middleware('role:Admin');
 
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit')->middleware('role:Admin');
-
 Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update')->middleware('role:Admin');
 
 Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete')->middleware('role:Admin');
@@ -92,6 +89,9 @@ Route::get('/reservations/thank-you', 'StaticPagesController@thankYou');
 
 Route::get('/admin/reservations', 'admin\ReservationController@index');
 Route::get('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
+
+// Route::get('/admin/reservations/{id}/edit', 'admin\ReservationController@edit')->middleware('role:Admin');
+// Route::put('/admin/reservations/{id}', 'admin\ReservationController@update')->middleware('role:Admin');
 
 // ------------------------------------------------------------------------
 // ############################ADMIN USERS#################################

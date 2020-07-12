@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -11030,13 +11030,13 @@ table {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #ed4852;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   overflow: hidden;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   padding: 100px;
 }
 
@@ -11062,11 +11062,33 @@ table {
 
 .welcome-jumbo .burger-fries {
   width: 100%;
+  -webkit-animation: moveUpandDown 1.3s linear infinite;
+          animation: moveUpandDown 1.3s linear infinite;
   position: relative;
 }
 
+@-webkit-keyframes moveUpandDown {
+  0%, 100% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 30px;
+  }
+}
+
+@keyframes moveUpandDown {
+  0%, 100% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 30px;
+  }
+}
+
 #about-page {
-  padding: 100px;
+  padding: 140px;
   margin: 90px 50px;
 }
 
@@ -11137,7 +11159,9 @@ table {
 }
 
 #contact-page p a {
-  color: red;
+  color: #8EC5FC;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 #contact-page iframe {
@@ -11195,7 +11219,7 @@ table {
 }
 
 #waitlist-page form .form-group .form-control {
-  border: 2px solid #9C1B24;
+  border: 2px solid #8EC5FC;
   font-size: 1rem;
   padding: 10px !important;
   box-sizing: border-box;
@@ -11203,14 +11227,21 @@ table {
 }
 
 #waitlist-page form .form-group button[type=submit] {
-  background: #9C1B24;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   border: none;
   padding: 20px 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+#waitlist-page form .form-group button[type=submit]:hover {
+  background: silver;
+  color: #FFF;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
   #waitlist-page {
-    padding: 20px;
+    padding: 32px 10px;
   }
 
   #waitlist-page h1 {
@@ -11220,14 +11251,14 @@ table {
 
 @media (min-width: 768px) and (max-width: 991px) {
   #waitlist-page {
-    padding: 20px;
+    padding: 82px;
   }
 }
 
 #offers-page {
-  padding: 100px;
+  padding: 120px;
   margin: 150px 50px;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 #offers-page h1 {
@@ -11256,7 +11287,7 @@ table {
 }
 
 #offers-page form .form-group .form-control {
-  border: 2px solid #9C1B24;
+  border: 2px solid #8EC5FC;
   font-size: 1rem;
   padding: 10px !important;
   box-sizing: border-box;
@@ -11264,9 +11295,16 @@ table {
 }
 
 #offers-page form .form-group button[type=submit] {
-  background: #9C1B24;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   border: none;
   padding: 20px 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+#offers-page form .form-group button[type=submit]:hover {
+  background: silver;
+  color: #FFF;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -11300,7 +11338,7 @@ table {
 }
 
 #menu-page {
-  padding: 100px;
+  padding: 145px;
 }
 
 #menu-page #food-preview {
@@ -11310,16 +11348,24 @@ table {
 
 #menu-page #food-preview h2 {
   color: #FFF;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 #menu-page #food-preview .right-btn,
 #menu-page #food-preview .left-btn {
-  background: #000;
+  background: #FFF;
+  color: #8EC5FC;
+  transition: all 0.3s ease-in-out;
 }
 
-#menu-page #food-preview .food-slider .slide:hover .background {
-  background: #000;
+#menu-page #food-preview .right-btn:hover,
+#menu-page #food-preview .left-btn:hover {
+  background: silver;
+  color: #FFF;
+}
+
+#menu-page #food-preview .food-slider .sliding-system .slide:hover .background {
+  background: silver;
   transform: translate3d(0, -200px, 0);
 }
 
@@ -11407,12 +11453,13 @@ table {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 #welcome {
   display: grid;
   width: 100%;
+  overflow-x: hidden;
 }
 
 #welcome .welcome-menu {
@@ -11430,7 +11477,7 @@ body {
 }
 
 #welcome .welcome-menu .logo img {
-  max-width: 100px;
+  max-width: 180px;
 }
 
 #welcome .welcome-menu .menu {
@@ -11439,7 +11486,7 @@ body {
 
 #welcome .welcome-menu .menu .menu-title {
   text-transform: uppercase;
-  color: #0971ce;
+  color: #8EC5FC;
   font-weight: 700;
   font-size: 1.2rem;
   border-bottom: 1px solid #e2eaef;
@@ -11454,11 +11501,11 @@ body {
   text-decoration: none;
   margin-bottom: 1.5rem;
   display: block;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 #welcome .welcome-menu .menu .links li a:hover {
-  color: red;
+  color: #8EC5FC;
 }
 
 #welcome .welcome-menu .social-icons {
@@ -11493,7 +11540,7 @@ body {
 }
 
 #welcome .welcome-menu .location .phone-number a {
-  color: #0971ce;
+  color: #8EC5FC;
   font-size: 1.8rem;
   font-weight: 700;
   text-decoration: none;
@@ -11502,11 +11549,11 @@ body {
 #welcome #content-section {
   transform: translate3d(300px, 0, 0);
   max-width: calc(100vw - 300px);
-  background: #ed4852;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -11551,6 +11598,7 @@ body {
   color: black;
   font-weight: 700;
   margin-bottom: -20px;
+  text-transform: capitalize;
 }
 
 #information .info .about-link span {
@@ -11564,11 +11612,8 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background: #ed4852;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -11584,12 +11629,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 51px 10px;
+  margin: 20px 10px;
 }
 
 #food-preview h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
 }
 
 #food-preview .button-rounded {
@@ -11615,7 +11661,8 @@ body {
 
 #food-preview .container .left-btn,
 #food-preview .container .right-btn {
-  background: red;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   color: white;
   height: 50px;
   width: 50px;
@@ -11661,7 +11708,7 @@ body {
 }
 
 #food-preview .food-slider .slide:hover .background {
-  background: #f59c2e;
+  background: silver;
   transform: translate3d(0, -200px, 0);
 }
 
@@ -11695,10 +11742,11 @@ body {
 }
 
 #food-preview .food-slider .slide .content .food-title {
-  color: #ed4852;
+  color: #8EC5FC;
   font-size: 2rem;
   font-weight: 900;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 #food-preview .food-slider .slide .content .food-description {
@@ -11733,17 +11781,16 @@ h2 {
 
   #welcome .welcome-jumbo {
     max-width: 100vw;
-    padding: 20px;
+    padding: 5px;
     width: 100%;
     transform: translate3d(0, 0, 0);
   }
 
   #welcome #content-section {
     max-width: 100vw;
-    padding: 20px;
+    padding: 5px;
     width: 100%;
     transform: translate3d(0, 0, 0);
-    overflow-y: scroll;
   }
 
   #information {
@@ -11810,14 +11857,14 @@ h2 {
 
   #welcome .welcome-jumbo {
     max-width: 100vw;
-    padding: 20px;
+    padding: 5px;
     width: 100%;
     transform: translate3d(0, 0, 0);
   }
 
   #welcome #content-section {
     max-width: 100vw;
-    padding: 20px;
+    padding: 5px;
     width: 100%;
     transform: translate3d(0, 0, 0);
   }

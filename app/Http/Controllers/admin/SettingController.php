@@ -26,6 +26,7 @@ class SettingController extends Controller
         ]);
     }
 
+    //update
     public function saveGeneral(){
 
         $id = 1;
@@ -66,6 +67,8 @@ class SettingController extends Controller
         ]);
     }
 
+
+    //update
     public function saveSeo(){
 
         $id = 1;
@@ -94,6 +97,8 @@ class SettingController extends Controller
         ]);
     }
 
+
+    //update
     public function saveSocial(){
 
         $id = 1;

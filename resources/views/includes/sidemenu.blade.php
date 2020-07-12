@@ -1,6 +1,7 @@
 <div class="welcome-menu">
     <a href="/" class="logo">
-      <img src="{{$settings["general_settings"]->logo_image_url}}">
+      {{-- <img src="{{$settings["general_settings"]->logo_image_url}}"> --}}
+      <img src="img/logo-2.png">
     </a>
     <div class="menu">
       <div class="menu-title">
@@ -48,7 +49,8 @@
         {{$settings["general_settings"]->postal_code}}
       </div>
       <div class="phone-number">
-        <a href="tel:{{$settings["general_settings"]->phone_number}}">{{$settings["general_settings"]->phone_number}}</a>
+        {{-- <a href="tel:{{$settings["general_settings"]->phone_number}}">{{$settings["general_settings"]->phone_number}}</a> --}}
+        <a href="tel:514-234-1232">514-234-1232</a>
       </div>
     </div>
   </div>
