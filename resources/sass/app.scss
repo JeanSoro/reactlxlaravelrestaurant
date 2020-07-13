@@ -57,7 +57,7 @@ body {
     // grid-template-columns: 350px 1fr;
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
 
 
@@ -318,7 +318,6 @@ body {
     .food-slider {
         width: 100%;
         max-width: 1400px;
-        // max-width: 1400px;
         // display: flex;
         // margin-bottom: 2rem;
         overflow: hidden;
@@ -331,10 +330,21 @@ body {
             transform: translate3d(-0%, 0, 0);
             transition: all .3s ease-in-out;
 
+            .background {
+                background: white;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                position: absolute;
+                transition: transform .3s ease-in-out;
+            }
+
         }
 
         .slide {
-            width: 20%;
+            width: 33.33%;
             position: relative;
             height: 500px;
             cursor: pointer;
@@ -359,16 +369,7 @@ body {
 
             }
 
-            .background {
-                background: white;
-                top: 0;
-                bottom: 0;
-                height: 100%;
-                width: 100%;
-                z-index: 1;
-                position: absolute;
-                transition: transform .3s ease-in-out;
-            }
+            
 
             .content {
                 position: absolute;
@@ -521,7 +522,7 @@ h2 {
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1130px) {
     #welcome {
         
         .welcome-menu {
@@ -606,13 +607,47 @@ h2 {
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1131px) and (max-width: 1199px) {
     // #welcome {
     //     .welcome-menu {
     //         display: none;
     //     }
     // }
+
+    #food-preview {
+        padding: 20px;
+        width: 100%;
+
+        .button-rounded {
+            margin-bottom: 2rem;
+        }
+
+
+        .container {
+            .left-btn {
+                left: -20px;
+            }
+
+            .right-btn {
+                left: -20px;
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            line-height: 1.4;
+            margin: 30px 0;
+        }
+
+        .food-slider {
+            .slide {
+                width: 33%;
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    
+}

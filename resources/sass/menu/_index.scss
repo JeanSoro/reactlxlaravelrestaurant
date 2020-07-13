@@ -1,6 +1,6 @@
 #menu-page {
 
-    padding: 145px;
+    padding: 135px;
 
     #food-preview {
         padding: 0;
@@ -26,21 +26,20 @@
         .food-slider {
 
             .sliding-system {
-                .slide {
+                    .slide {
 
-                &:hover {
-                    .background {
-                        background: rgb(192,192,192);
-                        transform: translate3d(0, -200px, 0);
+                    &:hover {
+                        .background {
+                            background: rgb(192,192,192);
+                            transform: translate3d(0, -200px, 0);
+                        }
+
+
                     }
 
-
                 }
-
-            }
             }
 
-            
 
         }
 
@@ -66,12 +65,15 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
     #menu-page {
-        padding: 70px;
+        padding: 80px;
     }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+
+}
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200) {}
