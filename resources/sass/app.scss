@@ -63,7 +63,7 @@ body {
 
     .welcome-menu {
         background: white;
-        padding: 50px;
+        padding: 35px;
         position: absolute !important;
         height: 100vh;
         width: 300px;
@@ -72,7 +72,7 @@ body {
         .logo {
             display: flex;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
 
             img {
                 max-width: 175px;
@@ -116,7 +116,7 @@ body {
 
         .social-icons {
             display: flex;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
 
             a {
                 display: flex;
@@ -140,7 +140,7 @@ body {
 
             .address {
                 color: #7a8d99;
-                margin-bottom: 40px;
+                margin-bottom: 12px;
                 line-height: 1.7;
 
             }
@@ -434,7 +434,7 @@ h2 {
         .welcome-jumbo {
             
             max-width: 100vw;
-            padding: 5px;
+            padding: 20px;
             width: 100%;
             transform: translate3d(0, 0, 0);
         }
@@ -533,7 +533,7 @@ h2 {
             
             max-width: 100vw;
             // padding: 20px;
-            padding: 5px;
+            padding: 15px;
             width: 100%;
             transform: translate3d(0, 0, 0);
         }

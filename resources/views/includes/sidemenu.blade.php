@@ -1,7 +1,7 @@
 <div class="welcome-menu">
     <a href="/" class="logo">
       {{-- <img src="{{$settings["general_settings"]->logo_image_url}}"> --}}
-      <img src="img/logo-2.png">
+      <img src="/img/logo-2.png">
     </a>
     <div class="menu">
       <div class="menu-title">

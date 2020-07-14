@@ -11037,7 +11037,7 @@ table {
   overflow: hidden;
   background-color: #8EC5FC;
   background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-  padding: 100px;
+  padding: 130px;
 }
 
 .welcome-jumbo .status {
@@ -11465,7 +11465,7 @@ body {
 
 #welcome .welcome-menu {
   background: white;
-  padding: 50px;
+  padding: 35px;
   position: absolute !important;
   height: 100vh;
   width: 300px;
@@ -11474,7 +11474,7 @@ body {
 #welcome .welcome-menu .logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 #welcome .welcome-menu .logo img {
@@ -11511,7 +11511,7 @@ body {
 
 #welcome .welcome-menu .social-icons {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 #welcome .welcome-menu .social-icons a {
@@ -11530,7 +11530,7 @@ body {
 
 #welcome .welcome-menu .location .address {
   color: #7a8d99;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
   line-height: 1.7;
 }
 
@@ -11776,7 +11776,7 @@ h2 {
 
   #welcome .welcome-jumbo {
     max-width: 100vw;
-    padding: 5px;
+    padding: 20px;
     width: 100%;
     transform: translate3d(0, 0, 0);
   }
@@ -11858,7 +11858,7 @@ h2 {
 
   #welcome .welcome-jumbo {
     max-width: 100vw;
-    padding: 5px;
+    padding: 15px;
     width: 100%;
     transform: translate3d(0, 0, 0);
   }
